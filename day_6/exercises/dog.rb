@@ -16,15 +16,36 @@ class Dog
     p "woof!"
   end
 
+  def hungry
+    @hungry
+    case
+    when @hungry == true
+      p "The dog is hungry"
+    else
+      p "The dog is full."
+    end
+  end
+
   def eat
     @hungry = false
+  p "You feed the dog."
   end
+
+  def play
+    @hungry = true
+    p "The dog needs to eat before playing again."
+  end
+
 end
 
 fido = Dog.new("Bernese", "Fido", 4)
 p fido.breed
 p fido.name
 p fido.age
-p fido.hungry
+fido.hungry
 fido.eat
-p fido.hungry
+fido.hungry
+fido.play
+fido.hungry
+fido.eat
+fido.hungry
